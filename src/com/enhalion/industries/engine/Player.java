@@ -13,11 +13,13 @@ public class Player implements Runnable{
 	public static int defence;
 	public static int attack;
 	public static int speed;
+	public static int attk_spd;
 	
 	static final int def_def = 0;
 	static final int def_hp = 12;
 	static final int def_att = 4;
 	static final int def_spe = 1;
+	static final int def_attkspd = 1;
 	
 	public static void setname(){
 		playername=JOptionPane.showInputDialog(null,"What is your name ?");
@@ -35,6 +37,7 @@ public class Player implements Runnable{
 		defence = def_def;
 		attack = def_att;
 		speed = def_spe;
+		attk_spd = def_attkspd;
 	}
 	public static void dealDamage(int EnemyAttack){
 		int previoushp = nowhp;

@@ -49,6 +49,9 @@ public class MusicManager implements Runnable{
 		midiplayer.stop();
 		midiplayer.close();
 	}
+	public static void stopmus(){
+		stopmidi();
+	}
 	public static void midiplay(String track){
 		for (int i=0;i<1001;i++){
 			if(i==1000){

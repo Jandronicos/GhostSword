@@ -18,6 +18,7 @@ public class Main {
 			}
 		}).start();
 		EngineDefine.ExecDefine();
+		//Test
 		Player.setname();
 		JOptionPane.showMessageDialog(null, "Your name is: " + Player.playername);
 		Player.setDefaults();
