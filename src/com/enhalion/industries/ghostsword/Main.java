@@ -5,16 +5,18 @@
 package com.enhalion.industries.ghostsword;
 
 import javax.swing.JOptionPane;
-import javax.swing.Spring;
 
-import com.enhalion.industries.engine.*;
+import com.enhalion.industries.engine.EngineDefine;
+import com.enhalion.industries.engine.MusicManager;
+import com.enhalion.industries.engine.Player;
 
 public class Main {
 	public static void main(String[]args)  
 	{ 
 		new Thread(new Runnable() {
 			public void run(){
-			GhostSwordDefine.init();
+				MusicManager.init();
+				GhostSwordDefine.init();
 			}
 		}).start();
 		EngineDefine.ExecDefine();

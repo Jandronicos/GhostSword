@@ -18,5 +18,6 @@ public class GhostSwordDefine{
 	public static void init() {
 		ExecDefine();
 		RegResources.main();
+		
 	}
 }

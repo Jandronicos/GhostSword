@@ -5,6 +5,8 @@
 
 package com.enhalion.industries.engine;
 
+import com.enhalion.industries.engine.MusicManager;
+
 public class EngineDefine {
 	public static int buildnum = 11;
 	static String vernum = "0." + buildnum + " InDev";

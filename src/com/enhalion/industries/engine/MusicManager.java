@@ -11,10 +11,12 @@ import javax.sound.midi.Sequencer;
 public class MusicManager implements Runnable{
 	
 	private static Sequencer midiplayer = null;
+	
 	@Override
 	public void run(){
 		init();
 	}
+	
 	public static void init(){
 		try {
 			midiplayer = MidiSystem.getSequencer();
@@ -38,9 +40,9 @@ public class MusicManager implements Runnable{
 			midiplay("BadThings.mid");
 		}else{
 			String trackname = GameRegistry.Music[request];
-			if (trackname.indexOf(".png",1) != 0){
+			//if (trackname.indexOf(".png",1) != 0){
 				midiplay(trackname);	
-			}
+			//}
 		}
 		
 	}
