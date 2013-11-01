@@ -26,7 +26,7 @@ public class Player implements Runnable{
 		if (playername.trim() != ""){
 			playername = playername.trim();
 		}else{
-			playername = "DEBUG";
+			playername = "Atlas";
 		}
 		System.out.println("Setting Player Name to " + playername);
 	}
