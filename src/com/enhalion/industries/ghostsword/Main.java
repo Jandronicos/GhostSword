@@ -13,14 +13,31 @@ import com.enhalion.industries.engine.Player;
 public class Main {
 	public static void main(String[]args)  
 	{ 
-		new Thread(new Runnable() {
+		Thread gameinit = new Thread(new Runnable() {
 			public void run(){
-				MusicManager.init();
 				GhostSwordDefine.init();
 			}
-		}).start();
-		EngineDefine.ExecDefine();
-		//Test
+		});
+		Thread engineinit = new Thread(new Runnable() {
+			public void run(){
+				MusicManager.init();
+				EngineDefine.ExecDefine();
+			}
+		});
+		engineinit.start();
+		gameinit.start();
+		try {
+			engineinit.join();
+		} catch (InterruptedException e) {
+			System.out.println("Something Stopped engine init");
+			System.exit(1);
+		}
+		try {
+			gameinit.join();
+		} catch (InterruptedException e) {
+			System.out.println("Something Stopped game init");
+			System.exit(1);
+		}
 		Player.setname();
 		JOptionPane.showMessageDialog(null, "Your name is: " + Player.playername);
 		Player.setDefaults();
