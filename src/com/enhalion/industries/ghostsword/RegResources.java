@@ -1,3 +1,7 @@
+/**
+ * Author: Joshua Barlin
+ * Purpose: To Register all the resources used by the game
+ */
 package com.enhalion.industries.ghostsword;
 
 import com.enhalion.industries.engine.GameRegistry;
